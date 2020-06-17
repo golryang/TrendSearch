@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <!-- 기기 크기에 따른 반응형 웹을 위한 뷰포트 설정 -->
+  <meta name="viewport" content="width-device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"> 
+
+  <!-- 폰트, 스타일시트-->
+  <link href="https://fonts.googleapis.com/css?family=Heebo|Noto+Sans+KR" rel="stylesheet">
+  <link rel="stylesheet" href="sub.css">
+  
+
+  <title>TrendSearch</title>
+</head>
+<body>
+
+  <!--네비게이션 바-->
+  <header class="header-area" id="header"> 
+    <div class="navbar">
+      <a class="navbar-title" href="index.html">Trend Search</a>
+
+      <div class="navbar-menu" id="menu">
+        <div class="nav-item"><a href="sub1.html">전년도 검색어 통계</a></div>
+        <div class="nav-item"><a href="sub2.html">카테고리 관심도 변화</a></div>
+        <div class="nav-item"><a href="sub3.html">인기 급상승 검색어</a></div>
+        <div class="nav-item"><a href="sub4.html">구글 트렌드란</a></div>
+      </div>
+    </div>
+  </header>
+
+    <h1 class="subtitle">카테고리 별 실시간 관심도 변화를 살펴보세요</h1>
+
+    <div class="sub2content">
+      <ul class="sub2-list">
+        <li class="sub2menu"><input type="button" id="listmenu1" value="건강"></li>
+        <li class="sub2menu"><input type="button" id="listmenu2" value="게임"></li>
+        <li class="sub2menu"><input type="button" id="listmenu3" value="과학"></li>
+        <li class="sub2menu"><input type="button" id="listmenu4" value="금융"></li>
+        <li class="sub2menu"><input type="button" id="listmenu5" value="뉴스"></li>
+      </ul>
+
+        <!-- 구글 트렌드 지원, JS퍼가기 -->
+      <div class="listitem" id="listitem1"><script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/2051_RC11/embed_loader.js"></script><script type="text/javascript"> trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"geo":"KR","time":"now 1-H"}],"category":45,"property":""}, {"exploreQuery":"cat=45&date=now%201-H&geo=KR","guestPath":"https://trends.google.co.kr:443/trends/embed/"}); </script></div>
+
+      <div class="listitem" id="listitem2"><script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/2051_RC11/embed_loader.js"></script><script type="text/javascript"> trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"geo":"KR","time":"now 1-H"}],"category":8,"property":""}, {"exploreQuery":"cat=8&date=now%201-H&geo=KR","guestPath":"https://trends.google.co.kr:443/trends/embed/"}); </script> </div>
+
+      <div class="listitem" id="listitem3"><script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/2051_RC11/embed_loader.js"></script><script type="text/javascript"> trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"geo":"KR","time":"now 1-H"}],"category":174,"property":""}, {"exploreQuery":"cat=174&date=now%201-H&geo=KR","guestPath":"https://trends.google.co.kr:443/trends/embed/"}); </script> </div>
+
+      <div class="listitem" id="listitem4"><script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/2051_RC11/embed_loader.js"></script><script type="text/javascript"> trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"geo":"KR","time":"now 1-H"}],"category":7,"property":""}, {"exploreQuery":"cat=7&date=now%201-H&geo=KR","guestPath":"https://trends.google.co.kr:443/trends/embed/"}); </script> </div>
+
+      <div class="listitem" id="listitem5"><script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/2051_RC11/embed_loader.js"></script><script type="text/javascript"> trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"geo":"KR","time":"now 1-H"}],"category":16,"property":""}, {"exploreQuery":"cat=16&date=now%201-H&geo=KR","guestPath":"https://trends.google.co.kr:443/trends/embed/"}); </script> </div>
+    </div>
+
+    <script type="text/javascript" src="sub2.js"></script>
+  </body>
+</html>

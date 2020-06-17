@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <!-- 기기 크기에 따른 반응형 웹을 위한 뷰포트 설정 -->
+  <meta name="viewport" content="width-device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"> 
+
+
+  <!-- 폰트, 스타일시트-->
+  <link href="https://fonts.googleapis.com/css?family=Heebo|Noto+Sans+KR" rel="stylesheet">
+  <link rel="stylesheet" href="sub.css">
+  
+
+  <title>TrendSearch</title>
+</head>
+<body>
+
+  <!--네비게이션 바-->
+  <header class="header-area" id="header"> 
+    <div class="navbar">
+      <a class="navbar-title" href="index.html">Trend Search</a>
+
+      <div class="navbar-menu" id="menu">
+        <div class="nav-item"><a href="sub1.html">전년도 검색어 통계</a></div>
+        <div class="nav-item"><a href="sub2.html">카테고리 관심도 변화</a></div>
+        <div class="nav-item"><a href="sub3.html">인기 급상승 검색어</a></div>
+        <div class="nav-item"><a href="sub4.html">구글 트렌드란</a></div>
+      </div>
+    </div>
+  </header>
+
+	<h1 class="subtitle">2019년도의 검색어 순위를 알아보세요!</h1>
+
+	<ul class="subcontent">
+		<li><h2>국내 총합</h2><script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/2051_RC11/embed_loader.js"></script> <script type="text/javascript"> trends.embed.renderTopChartsWidget("4abaa569-f396-4d51-a1b0-3115717b22fb", {"geo":"KR","guestPath":"https://trends.google.co.kr:443/trends/embed/"}, 2019); </script> </li>
+
+		<li><h2>인물</h2><script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/2051_RC11/embed_loader.js"></script> <script type="text/javascript"> trends.embed.renderTopChartsWidget("e0758a48-410c-4470-a830-5b4d2bdbd684", {"geo":"KR","guestPath":"https://trends.google.co.kr:443/trends/embed/"}, 2019); </script> </li>
+
+		<li><h2>국내 뉴스/이슈</h2><script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/2051_RC11/embed_loader.js"></script> <script type="text/javascript"> trends.embed.renderTopChartsWidget("d88c5454-78a4-4b47-9baa-2ee763974183", {"geo":"KR","guestPath":"https://trends.google.co.kr:443/trends/embed/"}, 2019); </script> </li>
+	</ul>
+</body>
+</html>

@@ -1,0 +1,236 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+/* sub2 영역 */
+input{
+    border: 0px;
+    width: 100%;
+    height: 100%;
+    outline: 0px;
+}
+
+.sub2-list{
+    background: lightgray;
+}
+
+.sub2-list li{
+    border: 0px;
+    margin: 0 auto;
+    padding: 0px;
+    height: 50px;
+}
+
+.sub2menu{
+    width: 20%;
+    text-align: center;
+    box-shadow: 1px 1px 1px 1px gray;  
+    border: 0px;
+    width: 100%;
+    height: 100%;
+    outline: 0px;
+}
+
+.sub2content > div{
+    position: absolute;
+    display: none;
+    height: 500px;
+    padding: 0px;
+    margin-left: 100px;
+    border: 0px;
+    width: 100%;
+}
+
+
+.subcontent{
+    margin-top: 40px;
+    margin-bottom: -40px;
+}
+.subcontent, .sub2-list{
+    display: flex;
+    margin: 0 auto;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.listitem{
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+}
+
+#trends-widget-5, #trends-widget-4, #trends-widget-3, #trends-widget-2, #trends-widget-1{
+    height: 85%;
+    width: 85%;
+    margin-top: 50px;
+}
+
+/* 공통 영역 */
+.subtitle{
+    padding-top: 100px;
+    padding-bottom: 70px;
+    font-size: 48px;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 6px;
+    animation-duration:2s;
+    animation-name:title;
+    color:#6C51D9;
+}
+
+@keyframes title{
+    0%{
+        margin-bottom: -40px;
+    }
+    30%{
+        letter-spacing: 14px;
+        margin-bottom: -40px;
+    }
+    85%{
+        letter-spacing: 4px;
+        margin-bottom: -40px;
+
+    }
+
+}
+
+/* 인덱스 공통영역 */
+body {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    word-break: break-all;
+    font-family: 'Heebo', sans-serif;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li{
+    text-align: center;
+    justify-content: center;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
+    width: 400px;
+    height: 600px;
+    padding:0px 25px;
+    margin: 10px 55px;
+}
+
+h2{
+    margin-top: 40px;
+    margin-bottom: -40px;
+}
+
+a {
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.header-area {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+    background-color: white;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
+}
+.header-area.navbar-fixed {
+    position: fixed;
+}
+
+.header-area > .navbar {
+    width: calc(100% - 120px);
+    margin: 0 60px;
+    overflow: hidden;
+}
+
+
+
+.header-area > .navbar > .navbar-title {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 32px;
+    cursor: pointer;
+    text-decoration: none;
+    list-style: none;
+    font-weight: 525;
+    color: black;
+
+}
+
+.header-area > .navbar > .navbar-menu {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: 0;
+    transition: 0.5s ease;
+    overflow: hidden;
+}
+
+@media (min-width: 320px){
+    .container > .image-slide {
+        height: 50%;
+    }
+
+    .header-area > .navbar > .navbar-menu > .nav-item{
+        display: none;
+    }
+    .header-area > .navbar > .navbar-toggle > i{
+        font-size: 30px;
+        display: block;
+    }
+}
+
+@media (min-width: 1000px) {
+    .header-area > .navbar {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+    .subcontent{
+        max-width: 1500px;
+    }  
+}
+
+@media (min-width: 992px) {
+    .header-area > .navbar > .navbar-menu {
+        position: relative;
+        float: right;
+        background-color: transparent;
+        top: 0;
+        width: auto;
+        height: auto;
+        transition: none;
+    }
+
+    .header-area > .navbar > .navbar-menu > .nav-item {
+        display: inline-block;
+        height: 70px;
+        line-height: 70px;
+    }
+
+    .header-area > .navbar > .navbar-menu > .nav-item > a {
+        display: block;
+        padding-left: 20px;
+        color: black;
+    }
+
+    .header-area > .navbar > .navbar-toggle i{
+        display: none;
+    }
+   
+}
+/* 애니메이션 */

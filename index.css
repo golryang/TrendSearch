@@ -1,0 +1,214 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body {
+    box-sizing: border-box; /*박스의 크기 표시 방식 변경, 테두리가 있는경우는 두께로인해 원하는 크기를 찾기가 어려워 사용 */
+    -webkit-box-sizing: border-box; /* -webkit은 구글, 사파리 호환 */ 
+    word-break: break-all; /* word-break는 글이 길어질때 줄바꿈을 지정하는 속성, break-all은 문자를 강제로 줄바꿈 할 수 있는 속성이다. */
+    font-family: 'Heebo', sans-serif;
+}
+img 
+{
+    width: 100%;
+    height: 100%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-transform: uppercase; /* 모두 대문자로 출력 */
+    text-decoration: none;
+    font-size: 16px;
+    
+}
+
+/* 헤더 영역 */
+.header-area {
+    position: relative; /* 포지션의 기본형은 스태틱이다. relative를 사용하면 위치 지정 가능. */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99; /* 포토샵의 레이어와 같은 개념. 엘리먼트가 쌓인 순서를 정한다. */
+    background-color: white;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
+}
+
+.header-area > .navbar {
+    width: calc(100% - 20px);
+    overflow: hidden;
+    display: block;
+}
+
+.header-area > .navbar > .navbar-title {
+    position: absolute;
+    display: block;
+    top: 20%;
+    float:left;
+    padding-left: 20px;
+    font-size: 32px;
+    cursor: pointer;
+    color: black;
+}
+
+.header-area > .navbar > .navbar-toggle {
+    float: right;
+    height: 70px;
+    line-height: 70px;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+.header-area > .navbar > .navbar-toggle > .toggle-item {
+    font-size:12px;
+}
+
+.header-area > .navbar > .nav-item{
+    float: right;
+    font-size: 12px;
+}
+
+.header-area > .navbar > .navbar-menu {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 70px;
+    left: 0;
+    height:0;
+    overflow: hidden;
+    float: right;
+    top: 0;
+    background: transparent;
+    width: auto;
+    height: auto;
+}
+
+.header-area > .navbar > .navbar-menu > .nav-item {
+    display: inline-block;
+    float: left;
+    height: 70px;
+    line-height: 70px;
+}
+.nav-item > a{
+    display: block;
+    padding-left: 20px;
+    color: black;
+}
+
+/* 이미지 슬라이더 영역 */
+.section-container {
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+.container {
+	position: relative;
+	height: 100%;
+}
+
+.container > .image-slide {
+    height:auto;
+    width: auto;
+}
+
+.container > .image-prev,
+.container > .image-next {
+    position: absolute;
+	cursor: pointer;
+	top: 50%;
+	width: auto;
+	padding: 16px;
+	margin-top: -22px;
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+	transition: 0.6s ease;
+	border-radius: 0 3px 3px 0;
+}
+
+.container > .image-next {
+	right: 0;
+	border-radius: 3px 0 0 3px;
+}
+
+.container > .image-prev:hover,
+.container > .image-next:hover {
+	background-color: rgba(0,0,0,255);
+}
+
+.container > .dots {
+	position: absolute;
+	width: 100%;
+	bottom: 10px;
+	text-align: center;
+}
+
+.container > .dots > .dot {
+	cursor: pointer;
+	height: 4px;
+	width: 30px;
+	margin: 0 2px;	
+	display: inline-block;
+    background-color: #717171;
+	transition: background-color 0.6s ease;
+}
+
+.container > .dots > .dot.active,
+.container > .dots > .dot:hover {
+	background-color: #ddd;
+}
+
+.container > .fade {
+    animation-name: fade;
+    animation-duration: 1.5s; 
+	-webkit-animation-name: fade;
+	-webkit-animation-duration: 1.5s;
+}
+
+/* 키프레임은 사용자가 중간과정을 제어할 수 있는 애니메이션 */
+@-webkit-keyframes fade {
+	from {opacity: .4}
+	to {opacity: 1}
+}
+
+@keyframes fade {
+	from {opacity: .4}
+	to {opacity: 1}
+}
+
+@media (min-width: 320px){
+    .container > .image-slide {
+        height: 50%;
+    }
+
+    .header-area > .navbar > .navbar-menu > .nav-item{
+        display: none;
+    }
+    .header-area > .navbar > .navbar-toggle > i{
+        font-size: 30px;
+    }
+}
+
+@media (min-width: 992px) {
+
+    .header-area > .navbar {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .header-area > .navbar > .navbar-toggle i{
+        display: none;
+    }
+
+    .container > .image-slide {
+        height: 650px;
+        width: auto;
+    }
+    
+    .header-area > .navbar > .navbar-menu > .nav-item{
+        display: block;
+    }
+}
